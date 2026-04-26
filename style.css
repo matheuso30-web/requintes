@@ -1,0 +1,110 @@
+/* Estilo Geral (Minimalista) */
+body { 
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+    margin: 0; 
+    color: #333; 
+    background-color: #fff; 
+}
+
+/* Cabeçalho */
+header { 
+    border-bottom: 1px solid #eee; 
+    padding: 20px; 
+    text-align: center; 
+    position: sticky; 
+    top: 0; 
+    background: #fff; 
+    z-index: 100; 
+}
+
+.logo { 
+    font-size: 24px; 
+    font-weight: bold; 
+    letter-spacing: 2px; 
+    text-transform: uppercase; 
+}
+
+nav { margin-top: 15px; }
+
+nav a { 
+    margin: 0 15px; 
+    text-decoration: none; 
+    color: #555; 
+    font-size: 13px; 
+    text-transform: uppercase; 
+}
+
+/* Banner Principal - TROQUE A FOTO AQUI */
+.hero { 
+    height: 500px; 
+    background: url('banner-home.jpg.jpg') no-repeat center center/cover; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: white; 
+    text-align: center;
+}
+
+.hero-content { 
+    background: none; 
+    padding: 0px; 
+}
+
+/* Grade de Produtos */
+.container { 
+    max-width: 1200px; 
+    margin: 40px auto; 
+    padding: 0 20px; 
+}
+
+.section-title {
+    text-align: center; 
+    margin-bottom: 40px; 
+    font-weight: 300;
+}
+
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px; 
+}
+
+/* Card de Produto */
+.product-card { 
+    text-align: center; 
+    transition: 0.3s; 
+}
+
+.product-card:hover { opacity: 0.8; }
+
+.product-card img { 
+    width: 100%; 
+    height: auto; 
+    margin-bottom: 15px; 
+}
+
+.product-title { 
+    font-size: 16px; 
+    margin-bottom: 10px; 
+    font-weight: 500; 
+}
+
+.product-price { 
+    color: #888; 
+    font-size: 14px; 
+    margin-bottom: 15px; 
+}
+
+.btn-buy { 
+    background: #000; 
+    color: #fff; 
+    padding: 10px 25px; 
+    text-decoration: none; 
+    font-size: 12px; 
+    text-transform: uppercase; 
+}
+
+/* Responsividade para Celular */
+@media (max-width: 768px) { 
+    .hero { height: 300px; } 
+}
