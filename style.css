@@ -36,7 +36,7 @@ nav a {
 
 /* Banner Principal - TROQUE A FOTO AQUI */
 .hero { 
-    height: 500px; 
+    height: 100vh; 
     background: url('banner-home.jpg'); 
     display: flex; 
     align-items: center; 
