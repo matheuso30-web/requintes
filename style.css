@@ -35,14 +35,11 @@ nav a {
 }
 
 /* Banner Principal - TROQUE A FOTO AQUI */
-.hero { 
-    height: 100vh; 
-    background: url('banner-home.jpg'); 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    color: white; 
-    text-align: center;
+.hero {
+    background: #cccccc url('./banner.jpg') no-repeat center center;
+    background-size: cover !important;
+    min-height: 100vh;
+    width: 100%;
 }
 
 .hero-content { 
