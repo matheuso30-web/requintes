@@ -156,12 +156,21 @@ nav a:hover {
     background-color: #20ba5a;
 }
 
-/* Ajuste para o botão não sumir no celular */
-@media (max-width: 768px) {
-    .whatsapp-fixo {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
+@media (max-width: 768px) { 
+    .hero { 
+        min-height: 50vh; /* Aumenta a altura no celular para a foto aparecer mais */
+        background-position: center center !important; /* Garante que o meio da foto seja o foco */
+    } 
+
+    .frase-efeito {
+        font-size: 1.1rem; /* Diminui um pouco a letra para não quebrar em mil linhas */
+        padding: 0 15px;
     }
+}
+
+.hero-content h1 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra para ler no claro */
+    text-align: center;
+    padding-top: 40vh; /* Empurra o texto para o meio da imagem */
 }
