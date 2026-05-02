@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chloé (contratipo) - Requintes da Natureza</title>
+    <!-- Importante: o caminho do CSS mudou para ../style.css pois estamos dentro de uma pasta -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Estilos específicos para a página de produto */
+        .container-produto {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .produto-galeria img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .produto-info h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--verde-musgo);
+        }
+
+        .preco-destaque {
+            font-size: 1.8rem;
+            color: var(--dourado-luxo);
+            font-weight: bold;
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        .secao-detalhes {
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .notas-olfativas {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid var(--verde-musgo);
+            margin: 30px 0;
+        }
+
+        .notas-olfativas h3 {
+            margin-top: 0;
+            color: var(--verde-musgo);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .btn-comprar-zap {
+            display: block;
+            background: #25d366;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .btn-comprar-zap:hover {
+            background: #1ebe57;
+            transform: scale(1.02);
+        }
+
+        .voltar {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: var(--verde-musgo);
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container-produto {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                margin-top: 20px;
+            }
+            .produto-info h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">REQUINTES DA NATUREZA</div>
+        <nav>
+            <a href="../index.html">Início</a>
+            <a href="../index.html#produtos">Produtos</a>
+        </nav>
+    </header>
+
+    <div class="container-produto">
+        <!-- Lado Esquerdo: Imagem -->
+        <div class="produto-galeria">
+            <a href="../index.html" class="voltar">← Voltar para a loja</a>
+            <img src="https://via.placeholder.com/600x800" alt="Difusor de Ambiente">
+        </div>
+
+        <!-- Lado Direito: Informações -->
+        <div class="produto-info">
+            <h1>chloe - 70ml</h1>
+            <span class="preco-destaque">R$ 70,00</span>
+
+            <div class="secao-detalhes">
+                <p>Nossa fórmula exclusiva de longa duração preenche o ambiente com sofisticação e leveza. Ideal para salas de estar e lavabos, proporcionando uma experiência sensorial única.</p>
+            </div>
+
+            <div class="notas-olfativas">
+                <h3>Pirâmide Olfativa</h3>
+                <p><strong>Topo:</strong> Chloé.</p>
+                <p><strong>Corpo:</strong> Chloé.</p>
+                <p><strong>Fundo:</strong> Chloé.</p>
+            </div>
+
+            <!-- Botão que já avisa qual produto é -->
+            <a href="https://wa.me/5511976092904?text=Olá! Tenho interesse no Chloé (contratipo)." 
+               class="btn-comprar-zap" target="_blank">
+                Encomendar via WhatsApp
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
