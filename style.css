@@ -106,3 +106,22 @@ nav a {
 @media (max-width: 768px) { 
     .hero { height: 300px; } 
 }
+
+.frases-container {
+    height: 150px;
+    background-color: #f9f9f9; /* Um fundo bem clarinho */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.frase-efeito {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #4a5d4a; /* Verde musgo sofisticado */
+    transition: opacity 0.8s ease-in-out; /* Suavidade na troca */
+    text-align: center;
+    font-family: 'Georgia', serif;
+}
