@@ -1,19 +1,25 @@
-/* Estilo Geral (Minimalista) */
-body { 
-    font-family: 'Helvetica Neue', Arial, sans-serif; 
-    margin: 0; 
-    color: #333; 
-    background-color: #fff; 
+:root {
+    --creme-fundo: #F2EDE4;   
+    --verde-musgo: #2D3A2D;   
+    --dourado-luxo: #B8860B;  
+    --branco-puro: #FFFFFF;
 }
 
-/* Cabeçalho */
+body {
+    background-color: var(--creme-fundo);
+    color: var(--verde-musgo);
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+}
+
 header { 
-    border-bottom: 1px solid #eee; 
+    border-bottom: 1px solid rgba(0,0,0,0.05); 
     padding: 20px; 
     text-align: center; 
     position: sticky; 
     top: 0; 
-    background: #fff; 
+    background: var(--creme-fundo); 
     z-index: 100; 
 }
 
@@ -29,25 +35,41 @@ nav { margin-top: 15px; }
 nav a { 
     margin: 0 15px; 
     text-decoration: none; 
-    color: #555; 
+    color: var(--verde-musgo); 
     font-size: 13px; 
-    text-transform: uppercase; 
+    text-transform: uppercase;
+    transition: 0.3s;
 }
 
-/* Banner Principal - TROQUE A FOTO AQUI */
+nav a:hover {
+    color: var(--dourado-luxo);
+}
+
 .hero {
     background: #cccccc url('./banner.jpg') no-repeat center center;
     background-size: cover !important;
-    min-height: 100vh;
+    min-height: 80vh;
     width: 100%;
 }
 
-.hero-content { 
-    background: none; 
-    padding: 0px; 
+.frases-container {
+    height: 120px;
+    background-color: var(--branco-puro); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
 
-/* Grade de Produtos */
+.frase-efeito {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--verde-musgo);
+    transition: all 0.5s ease;
+    text-align: center;
+}
+
 .container { 
     max-width: 1200px; 
     margin: 40px auto; 
@@ -66,13 +88,18 @@ nav a {
     gap: 30px; 
 }
 
-/* Card de Produto */
 .product-card { 
     text-align: center; 
     transition: 0.3s; 
+    background: var(--branco-puro);
+    padding: 20px;
+    border-radius: 4px;
 }
 
-.product-card:hover { opacity: 0.8; }
+.product-card:hover { 
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
 
 .product-card img { 
     width: 100%; 
@@ -80,48 +107,22 @@ nav a {
     margin-bottom: 15px; 
 }
 
-.product-title { 
-    font-size: 16px; 
-    margin-bottom: 10px; 
-    font-weight: 500; 
-}
-
-.product-price { 
-    color: #444; 
-    font-size: 14px; 
-    margin-bottom: 15px; 
-}
-
 .btn-buy { 
-    background: #000; 
-    color: #fff; 
+    display: inline-block;
+    background: var(--verde-musgo); 
+    color: var(--creme-fundo); 
     padding: 10px 25px; 
     text-decoration: none; 
     font-size: 12px; 
     text-transform: uppercase;
     letter-spacing: 2px;
+    transition: 0.3s;
 }
 
-/* Responsividade para Celular */
+.btn-buy:hover {
+    background: var(--dourado-luxo);
+}
+
 @media (max-width: 768px) { 
-    .hero { height: 300px; } 
-}
-
-.frases-container {
-    height: 150px;
-    background-color: #f9f9f9; /* Um fundo bem clarinho */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-}
-
-.frase-efeito {
-    font-size: 1.5rem;
-    font-style: italic;
-    color: #4a5d4a; /* Verde musgo sofisticado */
-    transition: opacity 0.8s ease-in-out; /* Suavidade na troca */
-    text-align: center;
-    font-family: 'Georgia', serif;
+    .hero { min-height: 300px; } 
 }

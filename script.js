@@ -6,21 +6,36 @@ const frases = [
 ];
 
 let indice = 0;
+let intervalo; 
 const elementoTexto = document.querySelector('.frase-efeito');
 
 function trocarFrase() {
-    // Primeiro, faz a frase sumir (opacidade 0)
     elementoTexto.style.opacity = 0;
-
     setTimeout(() => {
-        // Muda o texto quando estiver invisível
         indice = (indice + 1) % frases.length;
         elementoTexto.innerText = frases[indice];
-        
-        // Faz a frase aparecer (opacidade 1)
         elementoTexto.style.opacity = 1;
-    }, 800); // Espera o tempo da transição sumir para trocar
+    }, 800);
 }
 
-// Troca a frase a cada 4 segundos
-setInterval(trocarFrase, 4000);
+function iniciarCarrossel() {
+    intervalo = setInterval(trocarFrase, 4000);
+}
+
+function pararCarrossel() {
+    clearInterval(intervalo);
+    elementoTexto.style.color = "var(--dourado-luxo)"; 
+    elementoTexto.style.cursor = "default";
+}
+
+function retomarCarrossel() {
+    iniciarCarrossel();
+    elementoTexto.style.color = "var(--verde-musgo)"; 
+}
+
+// Eventos de Mouse
+elementoTexto.addEventListener('mouseover', pararCarrossel);
+elementoTexto.addEventListener('mouseout', retomarCarrossel);
+
+// Inicialização
+iniciarCarrossel();
