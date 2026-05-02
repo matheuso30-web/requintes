@@ -168,3 +168,43 @@ nav a:hover {
         padding: 0 15px;
     }
 }
+
+/* Layout da Página de Produto */
+.produto-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.produto-info h1 {
+    font-size: 2.5rem;
+    color: var(--verde-musgo);
+    margin-bottom: 10px;
+}
+
+.preco-destaque {
+    font-size: 1.8rem;
+    color: var(--dourado-luxo);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.descricao-olfativa {
+    background: rgba(255,255,255,0.5);
+    padding: 20px;
+    border-left: 4px solid var(--verde-musgo);
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .produto-wrapper { grid-template-columns: 1fr; }
+}
+
+/* Ajuste para as fotos da vitrine ficarem alinhadas */
+.product-card img {
+    height: 400px; 
+    object-fit: cover;
+    width: 100%;
+    border-radius: 8px 8px 0 0; /* Arredonda só os cantos de cima */
+}
