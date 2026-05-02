@@ -247,40 +247,36 @@ nav a:hover {
     color: #888;
 }
 
-/* AJUSTES PARA CELULAR (Telas menores que 768px) */
-@media (max-width: 768px) {
+/* AJUSTE FINAL PARA CELULAR */
+@media screen and (max-width: 480px) {
     header {
-        padding: 10px 0;
+        padding: 5px !important;
     }
-
+    
     .logo {
-        font-size: 1.5rem; /* Diminui um pouco o tamanho do nome no celular */
-        margin-bottom: 5px;
+        font-size: 1.2rem !important;
+        text-align: center !important;
     }
 
     nav {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 5px !important;
     }
 
     nav a {
-        font-size: 0.8rem; /* Deixa os links do menu menores para caberem em uma linha */
+        font-size: 11px !important; /* Força os links a ficarem pequenos para caberem */
+        padding: 5px !important;
     }
 
     .hero {
-        height: 60vh; /* Ajusta a altura da imagem para não ficar gigante no celular */
-        background-size: cover;
-        background-position: center;
+        height: 300px !important; /* Define uma altura fixa que sabemos que cabe */
+        background-size: cover !important;
+        background-position: center !important;
     }
 
     .hero-content h1 {
-        font-size: 2rem; /* Ajusta o tamanho do texto principal para não cortar */
-        padding: 0 20px;
-    }
-
-    .grid {
-        grid-template-columns: 1fr; /* Coloca um produto embaixo do outro no celular */
-        padding: 10px;
+        font-size: 1.5rem !important;
     }
 }
