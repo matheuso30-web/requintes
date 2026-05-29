@@ -266,14 +266,22 @@ nav a:hover {
     }
 
     nav a {
-        font-size: 11px !important; /* Força os links a ficarem pequenos para caberem */
+        font-size: 11px !important; 
         padding: 5px !important;
     }
 
     .hero {
-        height: 300px !important; /* Define uma altura fixa que sabemos que cabe */
-        background-size: cover !important;
-        background-position: center !important;
+        height: 320px !important; /* Altura controlada para o celular */
+        overflow: hidden !important; /* Esconde o que sobrar da imagem */
+        position: relative !important;
+    }
+
+    /* A MÁGICA PARA A IMAGEM NÃO ESTOURAR NA TELA: */
+    .hero img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important; /* Corta as bordinhas sem amassar a foto */
+        object-position: center !important;
     }
 
     .hero-content h1 {
