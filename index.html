@@ -7,17 +7,129 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        @media screen and (max-width: 480px) {
-            header { padding: 5px !important; }
-            .logo { font-size: 1.2rem !important; text-align: center !important; }
-            nav { display: flex !important; flex-wrap: wrap !important; justify-content: center !important; gap: 5px !important; }
-            nav a { font-size: 11px !important; padding: 5px !important; }
-            .hero { height: 320px !important; overflow: hidden !important; position: relative !important; }
-            .hero img { width: 100% !important; height: 100% !important; object-fit: cover !important; object-position: center !important; }
-            .hero-content h1 { font-size: 1.5rem !important; }
-            
-            /* Garante que qualquer imagem solta na hero também obedeça */
-            section.hero img { max-width: 100% !important; height: auto !important; }
+        @media screen and (max-width: 768px) {
+            header {
+                padding: 10px !important;
+            }
+            .logo {
+                font-size: 1.3rem !important;
+                text-align: center !important;
+                margin-bottom: 8px !important;
+            }
+            nav {
+                display: flex !important;
+                justify-content: center !important;
+                gap: 10px !important;
+                flex-wrap: wrap !important;
+            }
+            nav a {
+                font-size: 0.8rem !important;
+                padding: 4px !important;
+            }
+            .hero {
+                height: 350px !important; /* Controla a altura do topo no celular */
+                overflow: hidden !important;
+                position: relative !important;
+            }
+            .hero img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                object-position: center !important;
+            }
+            /* Caso a imagem esteja solta dentro da seção hero */
+            section.hero img, .hero-content img {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+            .grid {
+                grid-template-columns: 1fr !important; /* Um produto embaixo do outro no celular */
+                gap: 20px !important;
+                padding: 10px !important;
+            }
         }
     </style>
 </head>
+<body>
+
+    <header>
+        <div class="logo">REQUINTES DA NATUREZA</div>
+        <nav>
+            <a href="#">Linha Home</a>
+            <a href="#">Linha Body</a>
+            <a href="#">Promoções</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            </div>
+    </section>
+
+    <section class="frases-container">
+        <div id="carrossel-texto">
+            <p class="frase-efeito">Fragrâncias inspiradas na pureza da terra.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">Mais vendidos</h2>
+        
+        <div class="grid">
+            <div class="product-card">
+                <img src="foto-tecidos.jpg" alt="Difusor de Tecido">
+                <div class="product-title">Difusor de tecidos (Magnólia) - 200ml</div>
+                <div class="product-price">R$ 40,00</div>
+                <a href="produtos/difusor-tecidos.html" class="btn-buy">Ver Detalhes</a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x500" alt="Produto 2">
+                <div class="product-title">Difusor de ambiente (Chá Branco) - 200ml</div>
+                <div class="product-price">R$ 40,00</div>
+                <a href="produtos/difusor-ambiente.html" class="btn-buy">Ver Detalhes</a>
+            </div>
+
+            <div class="product-card">
+                <img src="foto-chloe.jpg" alt="Chloé (Inspiração) - 70ml">
+                <div class="product-title">Chloé (Inspiração) - 70ml</div>
+                <div class="product-price">R$ 70,00</div>
+                <a href="produtos/chloe.html" class="btn-buy">Ver Detalhes</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-natureza">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Requintes da Natureza</h3>
+                <p>Onde o aroma encontra o aconchego.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#">Linha Home</a></li>
+                    <li><a href="#">Linha Body</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>Conecte-se</h4>
+                <a href="https://instagram.com/requintesdanatureza" target="_blank">Instagram</a>
+                <a href="https://wa.me/5511976092904" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Requintes da Natureza - Feito com carinho.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5511976092904?text=Olá! Gostaria de saber mais sobre as maravilhosas fragrâncias da Requintes da Natureza." class="whatsapp-fixo" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
